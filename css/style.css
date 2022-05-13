@@ -1,0 +1,111 @@
+body {
+  background-color: #242424;
+}
+
+.wrapper-content {
+  max-width: 30%;
+  overflow: hidden;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 90% 10%;
+}
+
+input {
+  display: none;
+}
+
+.slider-container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slider-card {
+  width: 25%;
+  transition: all 0.5s ease;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: end;
+  align-self: end;
+}
+
+.dot {
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.2em solid #1a2385;
+  background-color: #1a2385;
+  margin: 0.1em;
+  transition: all 0.4s ease;
+}
+
+.dot:hover {
+  background-color: white;
+  border: 0.2em solid white;
+}
+
+.dot:active {
+  background-color: none;
+}
+
+#mem1:checked~.nav label:nth-child(1),
+#mem2:checked~.nav label:nth-child(2),
+#mem3:checked~.nav label:nth-child(3),
+#mem4:checked~.nav label:nth-child(4) {
+  width: 1em;
+  height: 1em;
+  background-color: #242424;
+  border: 0.2rem solid #1a2385;
+}
+
+#mem1:checked~.nav label:nth-child(1):hover,
+#mem2:checked~.nav label:nth-child(2):hover,
+#mem3:checked~.nav label:nth-child(3):hover,
+#mem4:checked~.nav label:nth-child(4):hover {
+  border: 0.2rem solid white;
+}
+
+#mem1:checked~.nav label:nth-child(1):active,
+#mem2:checked~.nav label:nth-child(2):active,
+#mem3:checked~.nav label:nth-child(3):active,
+#mem4:checked~.nav label:nth-child(4):active {
+  background-color: #242424;
+}
+
+#mem1:checked~.slider-container .active {
+  margin-left: 0;
+}
+
+#mem2:checked~.slider-container .active {
+  margin-left: -25%;
+}
+
+#mem3:checked~.slider-container .active {
+  margin-left: -50%;
+}
+
+#mem4:checked~.slider-container .active {
+  margin-left: -75%;
+}
