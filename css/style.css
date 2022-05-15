@@ -1,9 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #242424;
 }
 
 .wrapper-content {
-  max-width: 30%;
+  max-width: 40%;
   overflow: hidden;
   margin: auto;
   display: grid;
@@ -28,6 +33,7 @@ input {
 .slider-card {
   width: 25%;
   transition: all 0.5s ease;
+  border-radius: 0.5em;
 }
 
 img {
@@ -36,6 +42,14 @@ img {
   border-radius: 5%;
   margin-bottom: 1em;
   border-radius: 0.5em;
+}
+
+
+.text {
+  padding: 0 0 1% 1%;
+  color: rgb(255, 255, 255);
+  font-size: 1.3em;
+  ;
 }
 
 .nav {
@@ -48,16 +62,17 @@ img {
   grid-row-end: 3;
   justify-self: end;
   align-self: end;
+  align-items: center;
 }
 
 .dot {
   cursor: pointer;
-  width: 1em;
-  height: 1em;
+  width: 0.8em;
+  height: 0.8em;
   border-radius: 50%;
-  border: 0.2em solid #1a2385;
-  background-color: #1a2385;
-  margin: 0.1em;
+  border: 0.2em solid #1b59b6;
+  background-color: #1b59b6;
+  margin: 0.5em;
   transition: all 0.4s ease;
 }
 
@@ -74,17 +89,17 @@ img {
 #mem2:checked~.nav label:nth-child(2),
 #mem3:checked~.nav label:nth-child(3),
 #mem4:checked~.nav label:nth-child(4) {
-  width: 1em;
-  height: 1em;
+  width: 0.8em;
+  height: 0.8em;
   background-color: #242424;
-  border: 0.2rem solid #1a2385;
+  border: 0.2em solid #1b59b6;
 }
 
 #mem1:checked~.nav label:nth-child(1):hover,
 #mem2:checked~.nav label:nth-child(2):hover,
 #mem3:checked~.nav label:nth-child(3):hover,
 #mem4:checked~.nav label:nth-child(4):hover {
-  border: 0.2rem solid white;
+  border: 0.2em solid white;
 }
 
 #mem1:checked~.nav label:nth-child(1):active,
