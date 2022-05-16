@@ -10,7 +10,7 @@ body {
 .wrapper-content {
   max-width: 40%;
   overflow: hidden;
-  margin: auto;
+  margin: 1em auto;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 90% 10%;
@@ -65,15 +65,21 @@ img {
   align-items: center;
 }
 
+.point {
+    display: inline-block;
+      padding: 0.5rem;
+      cursor: pointer;
+}
+
 .dot {
-  cursor: pointer;
-  width: 0.8em;
-  height: 0.8em;
-  border-radius: 50%;
+    display: block;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
   border: 0.2em solid #1b59b6;
-  background-color: #1b59b6;
-  margin: 0.5em;
-  transition: all 0.4s ease;
+    background-color: #1b59b6;
+    transition: all 0.4s ease
+
 }
 
 .dot:hover {
@@ -85,29 +91,14 @@ img {
   background-color: none;
 }
 
-#mem1:checked~.nav label:nth-child(1),
-#mem2:checked~.nav label:nth-child(2),
-#mem3:checked~.nav label:nth-child(3),
-#mem4:checked~.nav label:nth-child(4) {
-  width: 0.8em;
-  height: 0.8em;
+#mem1:checked~.nav .point1 .dot,
+#mem2:checked~.nav .point2 .dot,
+#mem3:checked~.nav .point3 .dot,
+#mem4:checked~.nav .point4 .dot {
   background-color: #242424;
   border: 0.2em solid #1b59b6;
 }
 
-#mem1:checked~.nav label:nth-child(1):hover,
-#mem2:checked~.nav label:nth-child(2):hover,
-#mem3:checked~.nav label:nth-child(3):hover,
-#mem4:checked~.nav label:nth-child(4):hover {
-  border: 0.2em solid white;
-}
-
-#mem1:checked~.nav label:nth-child(1):active,
-#mem2:checked~.nav label:nth-child(2):active,
-#mem3:checked~.nav label:nth-child(3):active,
-#mem4:checked~.nav label:nth-child(4):active {
-  background-color: #242424;
-}
 
 #mem1:checked~.slider-container .active {
   margin-left: 0;
