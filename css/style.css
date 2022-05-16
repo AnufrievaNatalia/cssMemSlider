@@ -8,7 +8,7 @@ body {
 }
 
 .wrapper-content {
-  max-width: 40%;
+  max-width: 70%;
   overflow: hidden;
   margin: 1em auto;
   display: grid;
@@ -66,20 +66,19 @@ img {
 }
 
 .point {
-    display: inline-block;
-      padding: 0.5rem;
-      cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 .dot {
-    display: block;
-      height: 1rem;
-      width: 1rem;
-      border-radius: 50%;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
   border: 0.2em solid #1b59b6;
-    background-color: #1b59b6;
-    transition: all 0.4s ease
-
+  background-color: #1b59b6;
+  transition: all 0.4s ease
 }
 
 .dot:hover {
@@ -99,6 +98,21 @@ img {
   border: 0.2em solid #1b59b6;
 }
 
+#mem1:checked~.nav .point1 .dot:hover,
+#mem2:checked~.nav .point2 .dot:hover,
+#mem3:checked~.nav .point3 .dot:hover,
+#mem4:checked~.nav .point4 .dot:hover {
+  background-color: #242424;
+  border: 0.2em solid white;
+}
+
+#mem1:checked~.nav .point1 .dot:active,
+#mem2:checked~.nav .point2 .dot:active,
+#mem3:checked~.nav .point3 .dot:active,
+#mem4:checked~.nav .point4 .dot:active {
+  background-color: yellow;
+}
+
 
 #mem1:checked~.slider-container .active {
   margin-left: 0;
@@ -114,4 +128,55 @@ img {
 
 #mem4:checked~.slider-container .active {
   margin-left: -75%;
+}
+
+@media (max-width: 768px) {
+  p {
+    padding-bottom: 0em;
+    padding-left: 0em;
+    transition: 0.4s;
+    font-size: 0.9em;
+  }
+
+  .nav {
+    width: 0.8em;
+    height: 0.8em;
+    border: 0.2rem solid rgb(37, 40, 42);
+  }
+
+  #mem1:checked~.nav .point1 .dot,
+  #mem2:checked~.nav .point2 .dot,
+  #mem3:checked~.nav .point3 .dot,
+  #mem4:checked~.nav .point4 .dot {
+    width: 1em;
+    height: 1em;
+    border: 0.2rem solid #1b59b6;
+  }
+
+
+  .slider-card img {
+    padding-bottom: 3.5em;
+  }
+
+  .slider__wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 8% 17%;
+  }
+
+  .slider__slides {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .slider__navigation {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+  }
+
 }
